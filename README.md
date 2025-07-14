@@ -65,19 +65,42 @@ Ejemplo:
 # FIXME: Esta función falla si el archivo no existe
 ```
 
-## Configuración de pre-commit
+## Configuración y hooks de pre-commit
 
-Se recomienda usar pre-commit para asegurar la calidad del código antes de cada commit.
+Este repositorio utiliza [pre-commit](https://pre-commit.com/) para asegurar la calidad y seguridad del código antes de cada commit. Los hooks están definidos en `.pre-commit-config.yaml` y se instalan automáticamente al ejecutar `pre-commit install`.
+
+### Instalación y uso
 
 1. Instala pre-commit:
-   ```
+   ```bash
    pip install pre-commit
    ```
-2. Añade un archivo `.pre-commit-config.yaml` en la raíz del repositorio con los hooks deseados (por ejemplo, black, flake8, isort, etc.).
-3. Instala los hooks en el repositorio:
-   ```
+2. Instala los hooks en el repositorio:
+   ```bash
    pre-commit install
    ```
-4. Los hooks se ejecutarán automáticamente antes de cada commit.
+3. Los hooks se ejecutarán automáticamente antes de cada commit. Para ejecutarlos manualmente sobre todos los archivos:
+   ```bash
+   pre-commit run --all-files
+   ```
 
-Más información y ejemplos de configuración en: [https://pre-commit.com/](https://pre-commit.com/)
+### Hooks configurados
+
+| Hook                          | Descripción                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| check-added-large-files       | Evita agregar archivos grandes (>500KB)                                     |
+| check-yaml                    | Valida archivos YAML                                                        |
+| check-toml                    | Valida archivos TOML                                                        |
+| end-of-file-fixer             | Asegura que los archivos terminen en una línea vacía                        |
+| trailing-whitespace           | Elimina espacios al final de línea                                          |
+| requirements-txt-fixer        | Ordena y limpia requirements.txt                                            |
+| detect-private-key            | Detecta claves privadas en el código                                        |
+| double-quote-string-fixer     | Cambia comillas dobles por simples                                          |
+| ruff                          | Linter rápido tipo flake8/pycodestyle para Python                           |
+| ruff-format                   | Formateador de código Python (estilo black, pero más rápido)                |
+| gitleaks                      | Detecta credenciales y secretos en el código                               |
+| mypy                          | Análisis estático de tipos (type hints) para Python                         |
+
+**Recomendación:** No ignores los avisos de los hooks. Si un hook falla, revisa el mensaje y corrige el problema antes de hacer commit.
+
+Más información sobre cada hook y su configuración en el archivo `.pre-commit-config.yaml` y en la [documentación oficial de pre-commit](https://pre-commit.com/).
