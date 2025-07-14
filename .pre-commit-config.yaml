@@ -11,12 +11,18 @@ repos:
       - id: trailing-whitespace             # Elimina espacios al final de línea
       - id: requirements-txt-fixer          # Ordena y limpia requirements.txt
       - id: detect-private-key              # Detecta llaves privadas en el código
+      - id: double-quote-string-fixer       # Cambia comillas dobles por simples
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.12.3
     hooks:
       - id: ruff                            # Linter rápido tipo flake8/pycodestyle
       - id: ruff-format                     # Formateador estilo black, pero más rápido
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.2
+    hooks:
+      - id: gitleaks
 
   # - repo: https://github.com/numpy/numpydoc
   #   rev: v1.9.0
