@@ -1,4 +1,6 @@
 # Introduction
+**Template version: 1.0.0 (July 2025)**
+
 Este repositorio es una plantilla base para proyectos de ciencia de datos y machine learning en Data GC Naturgy. Proporciona una estructura modular y organizada que facilita el desarrollo, entrenamiento, evaluación y despliegue de modelos, así como la gestión de experimentos y análisis exploratorios. Su objetivo es servir como punto de partida para nuevos proyectos, promoviendo buenas prácticas y reutilización de código.
 
 # Repository Structure
