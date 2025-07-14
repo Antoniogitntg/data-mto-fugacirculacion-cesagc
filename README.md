@@ -1,20 +1,83 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Introduction
+Este repositorio es una plantilla base para proyectos de ciencia de datos y machine learning en Data GC Naturgy. Proporciona una estructura modular y organizada que facilita el desarrollo, entrenamiento, evaluación y despliegue de modelos, así como la gestión de experimentos y análisis exploratorios. Su objetivo es servir como punto de partida para nuevos proyectos, promoviendo buenas prácticas y reutilización de código.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Repository Structure
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+La estructura del repositorio es la siguiente:
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+```
+├── notebooks/
+│   ├── general_analysis_template.ipynb
+│   └── model_dev_template.ipynb
+├── src/
+│   ├── config/
+│   │   └── config_file.py
+│   ├── evaluate/
+│   │   └── evaluate.py
+│   ├── predict/
+│   │   └── predict.py
+│   ├── prep/
+│   │   └── prep.py
+│   ├── register/
+│   │   └── register.py
+│   ├── train/
+│   │   └── train.py
+│   └── utils/
+│       └── common.py
+├── test/
+├── requirements.txt
+└── README.md
+```
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+- **notebooks/**: Plantillas de notebooks para análisis exploratorio y desarrollo de modelos.
+- **src/**: Código fuente principal, organizado en módulos:
+  - **config/**: Configuración y parámetros del proyecto.
+  - **evaluate/**: Scripts para evaluación de modelos.
+  - **predict/**: Scripts para predicción con modelos entrenados.
+  - **prep/**: Scripts para preparación y limpieza de datos.
+  - **register/**: Registro y gestión de modelos.
+  - **train/**: Entrenamiento de modelos.
+  - **utils/**: Funciones utilitarias y comunes.
+- **test/**: Espacio para tests automatizados.
+- **requirements.txt**: Dependencias del proyecto.
+- **README.md**: Documentación principal del repositorio.
+
+# Buenas Prácticas de Desarrollo
+
+## Uso de Git
+
+- Trabaja en ramas feature/ o fix/ para nuevas funcionalidades o correcciones.
+- Realiza commits atómicos y con mensajes descriptivos (en español o inglés, pero consistentes).
+- Antes de hacer push, asegúrate de que el código pasa los tests (esto opcional por ahora) y cumple con las convenciones del proyecto.
+- Utiliza pull requests para revisión de código y evita hacer push directo a la rama principal.
+
+## Uso de etiquetas en el código
+
+Utiliza comentarios especiales para marcar tareas pendientes o problemas conocidos:
+- `# TODO: descripción de la tarea pendiente`
+- `# FIXME: descripción del problema a corregir`
+- `# NOTE: información relevante o advertencias`
+- `# HACK: soluciones temporales o poco elegantes`
+
+Ejemplo:
+```python
+# TODO: Añadir validación de datos de entrada
+# FIXME: Esta función falla si el archivo no existe
+```
+
+## Configuración de pre-commit
+
+Se recomienda usar pre-commit para asegurar la calidad del código antes de cada commit.
+
+1. Instala pre-commit:
+   ```
+   pip install pre-commit
+   ```
+2. Añade un archivo `.pre-commit-config.yaml` en la raíz del repositorio con los hooks deseados (por ejemplo, black, flake8, isort, etc.).
+3. Instala los hooks en el repositorio:
+   ```
+   pre-commit install
+   ```
+4. Los hooks se ejecutarán automáticamente antes de cada commit.
+
+Más información y ejemplos de configuración en: [https://pre-commit.com/](https://pre-commit.com/)

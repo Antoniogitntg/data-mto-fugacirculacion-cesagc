@@ -1,0 +1,45 @@
+default_stages: [pre-commit]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files         # Evita agregar archivos grandes (>500KB)
+      - id: check-yaml                      # Valida archivos YAML
+      - id: check-toml                      # Valida archivos TOML
+      - id: end-of-file-fixer               # Asegura que los archivos terminen en una línea vacía
+      - id: trailing-whitespace             # Elimina espacios al final de línea
+      - id: requirements-txt-fixer          # Ordena y limpia requirements.txt
+      - id: detect-private-key              # Detecta llaves privadas en el código
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.12.3
+    hooks:
+      - id: ruff                            # Linter rápido tipo flake8/pycodestyle
+      - id: ruff-format                     # Formateador estilo black, pero más rápido
+
+  # - repo: https://github.com/numpy/numpydoc
+  #   rev: v1.9.0
+  #   hooks:
+  #     - id: numpydoc                        # Verifica docstrings estilo NumPy
+
+  # - repo: https://github.com/pre-commit/mirrors-mypy
+  #   rev: v1.10.0
+  #   hooks:
+  #     - id: mypy                            # Análisis estático de tipos (type hints)
+
+  # - repo: https://github.com/jendrikseipp/vulture
+  #   rev: v2.14
+  #   hooks:
+  #     - id: vulture                         # Detecta código muerto o no utilizado
+  #     - args: [src/]
+
+  # - repo: https://github.com/kynan/nbstripout
+  #   rev: v0.8.0
+  #   hooks:
+  #     - id: nbstripout                    # (opcional) Elimina salidas de notebooks antes del commit
+
+  # - repo: https://github.com/pytest-dev/pytest-check
+  #   rev: v2.4.0
+  #   hooks:
+  #     - id: pytest-check                    # Permite múltiples aserciones sin detenerse al primer fallo
