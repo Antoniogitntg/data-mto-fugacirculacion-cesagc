@@ -44,6 +44,26 @@ La estructura del repositorio es la siguiente:
 
 # Buenas Prácticas de Desarrollo
 
+> **IMPORTANTE:** Todas las funciones y clases deben documentarse usando el formato [numpydoc](https://numpydoc.readthedocs.io/en/latest/format.html) para facilitar la comprensión y el mantenimiento del código. Ejemplo de docstring numpydoc:
+>
+> ```python
+> def ejemplo_funcion(param1, param2):
+>     \"\"\"Resumen breve de la función.
+>
+>     Parameters
+>     ----------
+>     param1 : tipo
+>         Descripción de param1.
+>     param2 : tipo
+>         Descripción de param2.
+>
+>     Returns
+>     -------
+>     tipo
+>         Descripción del valor de retorno.
+>     \"\"\"
+> ```
+
 ## Uso de Git
 
 - Trabaja en ramas feature/ o fix/ para nuevas funcionalidades o correcciones.
