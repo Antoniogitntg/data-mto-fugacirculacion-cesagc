@@ -12,16 +12,27 @@ y reutilización.
 
 def main_prep(input_path: str, output_path: str):
     """
-    Función principal de preparación de datos.
+    Example function. Both arguments and return values can be modified as needed by the developer.
 
-    Args:
-        input_path (str): Ruta al archivo o directorio de datos crudos.
-        output_path (str): Ruta donde se guardarán los datos procesados.
+    Main function for data preparation.
 
-    Esta función debe orquestar el flujo de carga, limpieza, transformación y guardado de los datos.
-    Personaliza y expande este flujo según los requerimientos de tu proyecto.
+    Parameters
+    ----------
+    input_path : str
+        Path to the raw data file or directory.
+    output_path : str
+        Path where the processed data will be saved.
+
+    Returns
+    -------
+    None
+
+    Notes
+    -----
+    This function should orchestrate the workflow of loading, cleaning, transforming, and saving the data.
+    Customize and expand this flow according to your project's requirements.
     """
-    # Ejemplo de estructura (debes implementar cada función según tu caso):
+    # Example structure (implement each function as needed for your case):
     # df = load_raw_data(input_path)
     # df_clean = clean_data(df)
     # df_features = feature_engineering(df_clean)

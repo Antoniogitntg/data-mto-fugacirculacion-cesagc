@@ -11,18 +11,29 @@ Mantén el código modular y bien documentado para facilitar la colaboración y 
 
 def main_evaluate(model_path: str, test_data_path: str, metrics_output_path: str):
     """
-    Función principal de evaluación de modelos.
+    Example function. Both arguments and return values can be modified as needed by the developer.
 
-    Args:
-        model_path (str): Ruta al modelo entrenado.
-        test_data_path (str): Ruta a los datos de prueba.
-        metrics_output_path (str): Ruta donde se guardarán los resultados de las métricas.
+    Main function for model evaluation.
 
-    Esta función debe orquestar el flujo de carga del modelo, evaluación sobre los datos de prueba,
-    cálculo de métricas y guardado de resultados. Personaliza y expande este flujo según los
-    requerimientos de tu proyecto.
+    Parameters
+    ----------
+    model_path : str
+        Path to the trained model.
+    test_data_path : str
+        Path to the test data.
+    metrics_output_path : str
+        Path where the metrics results will be saved.
+
+    Returns
+    -------
+    None
+
+    Notes
+    -----
+    This function should orchestrate the workflow of loading the model, evaluating on test data,
+    calculating metrics, and saving results. Customize and expand this flow according to your project's requirements.
     """
-    # Ejemplo de estructura (debes implementar cada función según tu caso):
+    # Example structure (implement each function as needed for your case):
     # model = load_model(model_path)
     # test_data = load_test_data(test_data_path)
     # predictions = model.predict(test_data)

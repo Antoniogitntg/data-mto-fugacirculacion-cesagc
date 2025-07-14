@@ -11,18 +11,29 @@ Mantén el código modular y bien documentado para facilitar la colaboración y 
 
 def main_train(train_data_path: str, model_output_path: str, params: dict = None):
     """
-    Función principal de entrenamiento de modelos.
+    Example function. Both arguments and return values can be modified as needed by the developer.
 
-    Args:
-        train_data_path (str): Ruta a los datos de entrenamiento.
-        model_output_path (str): Ruta donde se guardará el modelo entrenado.
-        params (dict, opcional): Diccionario de hiperparámetros o configuración del modelo.
+    Main function for model training.
 
-    Esta función debe orquestar el flujo de carga de datos, entrenamiento del modelo,
-    validación y guardado del modelo resultante. Personaliza y expande este flujo según los
-    requerimientos de tu proyecto.
+    Parameters
+    ----------
+    train_data_path : str
+        Path to the training data.
+    model_output_path : str
+        Path where the trained model will be saved.
+    params : dict, optional
+        Dictionary of hyperparameters or model configuration.
+
+    Returns
+    -------
+    None
+
+    Notes
+    -----
+    This function should orchestrate the workflow of loading data, training the model,
+    validating, and saving the resulting model. Customize and expand this flow according to your project's requirements.
     """
-    # Ejemplo de estructura (debes implementar cada función según tu caso):
+    # Example structure (implement each function as needed for your case):
     # train_data = load_train_data(train_data_path)
     # model = train_model(train_data, params)
     # validate_model(model, train_data)

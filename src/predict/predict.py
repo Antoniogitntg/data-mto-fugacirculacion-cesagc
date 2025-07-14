@@ -11,17 +11,29 @@ Mantén el código modular y bien documentado para facilitar la colaboración y 
 
 def main_predict(model_path: str, input_data_path: str, predictions_output_path: str):
     """
-    Función principal de predicción.
+    Example function. Both arguments and return values can be modified as needed by the developer.
 
-    Args:
-        model_path (str): Ruta al modelo entrenado.
-        input_data_path (str): Ruta a los datos de entrada para predecir.
-        predictions_output_path (str): Ruta donde se guardarán las predicciones generadas.
+    Main function for model prediction.
 
-    Esta función debe orquestar el flujo de carga del modelo, generación de predicciones
-    y guardado de resultados. Personaliza y expande este flujo según los requerimientos de tu proyecto.
+    Parameters
+    ----------
+    model_path : str
+        Path to the trained model.
+    input_data_path : str
+        Path to the input data for prediction.
+    predictions_output_path : str
+        Path where the generated predictions will be saved.
+
+    Returns
+    -------
+    None
+
+    Notes
+    -----
+    This function should orchestrate the workflow of loading the model, generating predictions,
+    and saving results. Customize and expand this flow according to your project's requirements.
     """
-    # Ejemplo de estructura (debes implementar cada función según tu caso):
+    # Example structure (implement each function as needed for your case):
     # model = load_model(model_path)
     # input_data = load_input_data(input_data_path)
     # predictions = model.predict(input_data)

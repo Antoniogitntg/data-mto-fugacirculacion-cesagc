@@ -11,17 +11,29 @@ Mantén el código modular y bien documentado para facilitar la colaboración y 
 
 def main_register(model_path: str, registry_uri: str, metadata: dict = None):
     """
-    Función principal de registro de modelos o artefactos.
+    Example function. Both arguments and return values can be modified as needed by the developer.
 
-    Args:
-        model_path (str): Ruta al modelo o artefacto a registrar.
-        registry_uri (str): URI o ruta del sistema de registro (local o remoto).
-        metadata (dict, opcional): Diccionario con metadatos adicionales para el registro.
+    Main function for model or artifact registration.
 
-    Esta función debe orquestar el flujo de carga del modelo, registro en el sistema correspondiente,
-    y almacenamiento de metadatos. Personaliza y expande este flujo según los requerimientos de tu proyecto.
+    Parameters
+    ----------
+    model_path : str
+        Path to the model or artifact to register.
+    registry_uri : str
+        URI or path of the registry system (local or remote).
+    metadata : dict, optional
+        Dictionary with additional metadata for registration.
+
+    Returns
+    -------
+    None
+
+    Notes
+    -----
+    This function should orchestrate the workflow of loading the model, registering it in the corresponding system,
+    and storing metadata. Customize and expand this flow according to your project's requirements.
     """
-    # Ejemplo de estructura (debes implementar cada función según tu caso):
+    # Example structure (implement each function as needed for your case):
     # model = load_model(model_path)
     # register_model(model, registry_uri, metadata)
     return None
