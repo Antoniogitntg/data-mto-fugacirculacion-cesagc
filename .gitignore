@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+*.pyo
+ 
+# Virtual environments
+.venv*
+venv*
+env*
+ENV*
+env.bak*
+venv.bak*
+ 
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+ 
+# VSCode
+.vscode/
+.history/
+ 
+# System files
+.DS_Store
+Thumbs.db
+ 
+# Azure ML Studio
+azureml-logs/
+azureml_runs/
+logs/
+outputs/
+*.azureml/
+aml_config/
+*.amlignore*
+ 
+# Data, models, results (customize as needed)
+data/
+datasets/
+models/
+results/
+checkpoints/
+tmp/
+temp/
+*.h5
+*.ckpt
+*.pt
+*.pth
+*.joblib
+*.pkl
+*.csv
+*.tsv
+*.parquet
+ 
+# Git
+.git/
+# .gitignore
+ 
+# Azure DevOps
+*.tfstate
+*.tfstate.*
+ 
+# Others
+*.log
+*.bak
+*.swp
+*.swo
+*.tmp
+*.out
+*.old
+*.orig
+*.rej
+*.zip
+*.tar.gz
+*.tar
+*.rar
+ 
+# Ignore notebook outputs (optional, if using nbstripout or similar)
+**/.ipynb_checkpoints/
+ 
